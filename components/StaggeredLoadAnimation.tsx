@@ -17,12 +17,12 @@ interface StaggeredLoadAnimationProps {
 
 // Sample data for demonstration
 const defaultItems: Item[] = [
-    { id: 1, title: "Modern Coffee Table", image: "/api/placeholder/300/200", price: "$249" },
-    { id: 2, title: "Ergonomic Office Chair", image: "/api/placeholder/300/200", price: "$399" },
-    { id: 3, title: "Smart LED Desk Lamp", image: "/api/placeholder/300/200", price: "$89" },
-    { id: 4, title: "Minimalist Bookshelf", image: "/api/placeholder/300/200", price: "$179" },
-    { id: 5, title: "Wireless Charging Pad", image: "/api/placeholder/300/200", price: "$59" },
-    { id: 6, title: "Bluetooth Speaker", image: "/api/placeholder/300/200", price: "$129" },
+    { id: 1, title: "Modern Coffee Table", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfIojjpiZAi2sBczAmkcyy1cOLlBriIe20GNwSOt_JcVVlbwsoFjeEr7hZehbaleXY4npsLY9Z8DI6N-In_BHUlbeiJXV-5ZeiVD3gXIvxdktB0REx4pozoFvj&usqp=CAc", price: "$249" },
+    { id: 2, title: "Ergonomic Office Chair", image: "https://images.pexels.com/photos/16618328/pexels-photo-16618328/free-photo-of-a-white-desk-with-a-chair-and-a-lamp.jpeg?auto=compress&cs=tinysrgb&w=600", price: "$399" },
+    { id: 3, title: "Smart LED Desk Lamp", image: "https://images.pexels.com/photos/7063760/pexels-photo-7063760.jpeg?auto=compress&cs=tinysrgb&w=600", price: "$89" },
+    { id: 4, title: "Minimalist Bookshelf", image: "https://images.pexels.com/photos/683929/pexels-photo-683929.jpeg?auto=compress&cs=tinysrgb&w=600", price: "$179" },
+    { id: 5, title: "Wireless Charging Pad", image: "https://images.pexels.com/photos/7952558/pexels-photo-7952558.jpeg?auto=compress&cs=tinysrgb&w=600", price: "$59" },
+    { id: 6, title: "Bluetooth Speaker", image: "https://images.pexels.com/photos/31683433/pexels-photo-31683433/free-photo-of-marshall-portable-bluetooth-speaker-close-up.jpeg?auto=compress&cs=tinysrgb&w=600", price: "$129" },
 ];
 
 const StaggeredLoadAnimation: React.FC<StaggeredLoadAnimationProps> = ({
@@ -56,7 +56,7 @@ const StaggeredLoadAnimation: React.FC<StaggeredLoadAnimationProps> = ({
                 {items.map((item) => (
                     <div
                         key={item.id}
-                        className={`bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500 transform ${visibleItems.includes(item.id)
+                        className={`bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-500 transform ${visibleItems.includes(item.id)
                             ? 'opacity-100 translate-y-0'
                             : 'opacity-0 translate-y-8'
                             }`}
